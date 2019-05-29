@@ -1,8 +1,8 @@
 // MAIN VARS
 $grid-cols-count: 18;
-$screen-xs-max: 900px; //ExtraSmall Devices Max Width
-$screen-sm-max: 1024px; //Small Devices Max Width
-$screen-md-max: 1200px; //Medium Devices Max Width
+$screen-xs-max: 1000px; //ExtraSmall Devices Max Width
+$screen-sm-max: 1200px; //Small Devices Max Width
+$screen-md-max: 1367px; //Medium Devices Max Width
 $breakpoints: (sm: $screen-xs-max, md: $screen-sm-max, lg: $screen-md-max);
 
 // FONTS

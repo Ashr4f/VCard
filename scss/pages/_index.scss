@@ -36,25 +36,49 @@
     z-index: 2;
 
     &.first-col {
-        text-align: center;
 
         .profile-pic-container {
             position: relative;
             height: 100%;
 
+            @media screen and (max-width: $screen-xs-max) {
+                height: auto;
+                text-align: center;
+                padding: rem(50) 0;
+            }
+
             .profile-pic {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+
+
+
+                @media screen and (max-width: $screen-xs-max) {
+                    width: 50%;
+                    height: auto;
+                    padding: rem(4);
+                    border: rem(4) solid rgba(0, 0, 0, 0.5);
+                    @include prefixer(border-radius, 100%, webkit moz);
+                    animation: dynamic-border-color 100s linear infinite;
+                }
+
+                @media screen and (max-width: $screen-xs-max) and (min-width: 600px) {
+                    width: 35%;
+                }
+
             }
         }
     }
 
     &.second-col {
         position: relative;
-        background: rgb(189, 195, 199);
-        @include prefixer(background, linear-gradient(180deg, rgba(189, 195, 199, 1) 0%, rgba(245, 246, 250, 1) 30%, rgba(241, 242, 246, 1) 70%, rgba(189, 195, 199, 1) 100%), webkit moz);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdc3c7", endColorstr="#bdc3c7", GradientType=1);
+
+        @media screen and (min-width: $screen-xs-max) {
+            background: rgb(189, 195, 199);
+            @include prefixer(background, linear-gradient(180deg, rgba(189, 195, 199, 1) 0%, rgba(245, 246, 250, 1) 30%, rgba(241, 242, 246, 1) 70%, rgba(189, 195, 199, 1) 100%), webkit moz);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bdc3c7", endColorstr="#bdc3c7", GradientType=1);
+        }
 
         .profile-description-container {
             position: relative;
@@ -62,6 +86,11 @@
             padding-#{$right}: rem(180);
             padding-bottom: 0;
             height: 100%;
+
+            @media screen and (max-width: $screen-xs-max) {
+                padding: rem(32);
+                padding-bottom: rem(64);
+            }
         }
 
         .profile-name-container {
@@ -69,6 +98,7 @@
             .profile-name {
                 font-size: rem(40);
                 color: $main-theme-color;
+                animation: dynamic-theme-font-color 100s linear infinite;
                 animation: dynamic-theme-font-color 100s linear infinite;
 
                 .bold {
@@ -103,12 +133,34 @@
 
         .contact-options-container {
             position: relative;
+            @include clearfix();
+
 
             .contact-option {
                 display: inline-block;
 
                 &:not(:last-of-type) {
-                    margin-#{$right}: rem(16);
+                    @media screen and (min-width: $screen-xs-max) {
+                        margin-#{$right}: rem(16);
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        padding-bottom: rem(24);
+                    }
+                }
+
+
+                @media screen and (max-width: $screen-xs-max) {
+                    text-align: center;
+                    float: $left;
+                    width: 33.3333%;
+                }
+
+                @media screen and (max-width: 550px) {
+                    display: block;
+                    width: 75%;
+                    float: none;
+                    margin: 0 auto;
                 }
 
                 a {
@@ -120,19 +172,36 @@
                     width: rem(52);
                     height: rem(52);
 
+                    @media screen and (max-width: $screen-xs-max) {
+                        width: rem(150);
+                        margin: 0 auto;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        width: 75%;
+                    }
+
+
                     svg {
                         position: absolute;
                         @include centering();
                         width: 75%;
                         height: auto;
-                    }
 
-                    svg {
+                        @media screen and (max-width: $screen-xs-max) {
+                            width: 25%;
+                        }
+
+                        @media screen and (max-width: 550px) {
+                            width: 15%;
+                        }
+
                         g {
                             fill: red;
                             animation: dynamic-svg-color 100s linear infinite;
                         }
                     }
+
                 }
             }
         }

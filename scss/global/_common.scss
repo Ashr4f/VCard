@@ -43,12 +43,12 @@ html {
 
     font-size: 16px;
 
-    @media screen and (min-width: 900px) {
-        @include fluid-type(900px, 1400px, 8px, 16px);
+    @media screen and (min-width: 1000px) {
+        @include fluid-type(1000px, 1400px, 10px, 16px);
     }
 
-    @media screen and (max-width: 900px) {
-        @include fluid-type(1px, 900px, 14px, 16px);
+    @media screen and (max-width: 1000px) {
+        @include fluid-type(1px, 1000px, 14px, 16px);
     }
 }
 
@@ -60,7 +60,7 @@ body {
     font-family: $mainFont_Regular;
     min-height: 100%;
 
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: $screen-xs-max) {
         background-image: url(".././images/background.jpg");
         background-size: cover;
         background-position: center center;
@@ -100,6 +100,15 @@ h6 {
 img {
     -webkit-touch-callout: none;
     @include prefixer(user-select, none, webkit khtml moz o ms);
+}
+
+.break-long-words {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    @include prefixer(hyphens, auto, webkit moz ms);
 }
 
 span,
