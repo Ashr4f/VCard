@@ -522,12 +522,12 @@ html {
 }
 @media screen and (min-width: 900px) {
   html {
-    font-size: 12px;
+    font-size: 8px;
   }
 }
 @media screen and (min-width: 900px) and (min-width: 900px) {
   html {
-    font-size: calc(12px + 4 * ((100vw - 900px) / 500));
+    font-size: calc(8px + 8 * ((100vw - 900px) / 500));
   }
 }
 @media screen and (min-width: 900px) and (min-width: 1400px) {
@@ -646,7 +646,7 @@ label.bold {
 @media screen and (min-width: 900px) {
   .content-container {
     overflow: hidden;
-    border-right: 0.75rem solid #0097e6;
+    border-left: 0.75rem solid #0097e6;
     -webkit-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.5);
     -ms-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.5);
@@ -654,9 +654,9 @@ label.bold {
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
     border-radius: 0.5rem;
-    -webkit-border-top-right-radius: 15.625rem;
-    -moz-border-top-right-radius: 15.625rem;
-    border-top-right-radius: 15.625rem;
+    -webkit-border-top-left-radius: 15.625rem;
+    -moz-border-top-left-radius: 15.625rem;
+    border-top-left-radius: 15.625rem;
     animation: dynamic-border-color 100s linear infinite;
   }
 }
@@ -666,7 +666,7 @@ label.bold {
 }
 @media screen and (min-width: 900px) {
   .column {
-    height: 41.875rem;
+    height: 40.625rem;
   }
 }
 .column.first-col {
@@ -692,6 +692,8 @@ label.bold {
 .column.second-col .profile-description-container {
   position: relative;
   padding: 8.75rem 3rem;
+  padding-left: 11.25rem;
+  padding-bottom: 0;
   height: 100%;
 }
 .column.second-col .profile-name-container .profile-name {
@@ -709,7 +711,6 @@ label.bold {
 .column.second-col .profile-description {
   position: relative;
   padding-bottom: 4rem;
-  padding-right: 11.25rem;
 }
 .column.second-col .profile-description p {
   font-size: 1.25rem;
@@ -730,7 +731,7 @@ label.bold {
   display: inline-block;
 }
 .column.second-col .contact-options-container .contact-option:not(:last-of-type) {
-  margin-right: 1rem;
+  margin-left: 1rem;
 }
 .column.second-col .contact-options-container .contact-option a {
   position: relative;

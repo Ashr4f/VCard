@@ -20,17 +20,17 @@
 
     @media screen and (min-width: $screen-xs-max) {
         overflow: hidden;
-        border-right: rem(12) solid $main-theme-color;
+        border-#{$right}: rem(12) solid $main-theme-color;
         @include box-shadow(0px, 0px, 70px, 0px);
         @include prefixer(border-radius, rem(8), webkit moz);
-        @include prefixer(border-top-right-radius, rem(250), webkit moz);
+        @include prefixer(border-top-#{$right}-radius, rem(250), webkit moz);
         animation: dynamic-border-color 100s linear infinite;
     }
 }
 
 .column {
     @media screen and (min-width: $screen-xs-max) {
-        height: rem(670);
+        height: rem(650);
     }
 
     z-index: 2;
@@ -59,6 +59,8 @@
         .profile-description-container {
             position: relative;
             padding: rem(140) rem(48);
+            padding-#{$right}: rem(180);
+            padding-bottom: 0;
             height: 100%;
         }
 
@@ -84,7 +86,6 @@
         .profile-description {
             position: relative;
             padding-bottom: rem(64);
-            padding-right: rem(180);
 
             p {
                 font-size: rem(20);
@@ -107,7 +108,7 @@
                 display: inline-block;
 
                 &:not(:last-of-type) {
-                    margin-right: rem(16);
+                    margin-#{$right}: rem(16);
                 }
 
                 a {
