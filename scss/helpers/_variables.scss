@@ -1,0 +1,19 @@
+// MAIN VARS
+$grid-cols-count: 18;
+$screen-xs-max: 900px; //ExtraSmall Devices Max Width
+$screen-sm-max: 1024px; //Small Devices Max Width
+$screen-md-max: 1200px; //Medium Devices Max Width
+$breakpoints: (sm: $screen-xs-max, md: $screen-sm-max, lg: $screen-md-max);
+
+// FONTS
+$mainFont_ExtraLight: "Montserrat_ExtraLight";
+$mainFont_Light: "Montserrat_Light";
+$mainFont_SemiBold: "Montserrat_SemiBold";
+$mainFont_Bold: "Montserrat_Bold";
+$mainFont_Regular: "Montserrat_Regular";
+
+// COLORS
+$main-background-color: #f5f6fa;
+$main-font-color: #353b48;
+$main-theme-color: #0097e6;
+$selection-background-color: #273c75;

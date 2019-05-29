@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+// FONTS
+@font-face {
+    font-family: Montserrat_ExtraLight;
+    src: url(.././fonts/Montserrat/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Montserrat_Light;
+    src: url(.././fonts/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Montserrat_Regular;
+    src: url(.././fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat_SemiBold;
+    src: url(.././fonts/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Montserrat_Bold;
+    src: url(.././fonts/Montserrat/Montserrat-Bold.ttf);
+}
+
+// MAIN AND COMMUN
+
+*::selection {
+    background: $selection-background-color;
+    color: #FFFFFF;
+}
+
+*::-moz-selection {
+    background: $selection-background-color;
+    color: #ffffff;
+}
+
+html {
+    height: 100%;
+
+    font-size: 16px;
+
+    @media screen and (min-width: 900px) {
+        @include fluid-type(900px, 1400px, 12px, 16px);
+    }
+
+    @media screen and (max-width: 900px) {
+        @include fluid-type(1px, 900px, 14px, 16px);
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $main-background-color;
+    color: $main-font-color;
+    font-family: $mainFont_Regular;
+    min-height: 100%;
+
+    @media screen and (min-width: 900px) {
+        background-image: url(".././images/background.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+input,
+select,
+a,
+i,
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+.no-select,
+img {
+    -webkit-touch-callout: none;
+    @include prefixer(user-select, none, webkit khtml moz o ms);
+}
+
+span,
+p,
+a,
+label {
+    margin: 0;
+    padding: 0;
+
+    &.bold {
+        font-family: $mainFont_Bold;
+    }
+}

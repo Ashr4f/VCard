@@ -1,0 +1,183 @@
+@include keyframes-prefixer(dynamic-theme-color) {
+    0% {
+        background-color: $main-theme-color;
+    }
+
+    10% {
+        background-color: #2ecc71;
+    }
+
+    20% {
+        background-color: #8e44ad;
+    }
+
+    30% {
+        background-color: #e67e22;
+    }
+
+    40% {
+        background-color: #e74c3c;
+    }
+
+    50% {
+        background-color: #3498db;
+    }
+
+    60% {
+        background-color: #f7b731;
+    }
+
+    70% {
+        background-color: #474787;
+    }
+
+    80% {
+        background-color: #ff793f;
+    }
+
+    90% {
+        background-color: #54a0ff;
+    }
+
+    100% {
+        background-color: $main-theme-color;
+    }
+}
+
+@include keyframes-prefixer(dynamic-border-color) {
+    0% {
+        border-color: $main-theme-color;
+    }
+
+    10% {
+        border-color: #2ecc71;
+    }
+
+    20% {
+        border-color: #8e44ad;
+    }
+
+    30% {
+        border-color: #e67e22;
+    }
+
+    40% {
+        border-color: #e74c3c;
+    }
+
+    50% {
+        border-color: #3498db;
+    }
+
+    60% {
+        border-color: #f7b731;
+    }
+
+    70% {
+        border-color: #474787;
+    }
+
+    80% {
+        border-color: #ff793f;
+    }
+
+    90% {
+        border-color: #54a0ff;
+    }
+
+    100% {
+        border-color: $main-theme-color;
+    }
+}
+
+@include keyframes-prefixer(dynamic-svg-color) {
+    0% {
+        fill: $main-theme-color;
+    }
+
+    10% {
+        fill: #2ecc71;
+    }
+
+    20% {
+        fill: #8e44ad;
+    }
+
+    30% {
+        fill: #e67e22;
+    }
+
+    40% {
+        fill: #e74c3c;
+    }
+
+    50% {
+        fill: #3498db;
+    }
+
+    60% {
+        fill: #f7b731;
+    }
+
+    70% {
+        fill: #474787;
+    }
+
+    80% {
+        fill: #ff793f;
+    }
+
+    90% {
+        fill: #54a0ff;
+    }
+
+    100% {
+        fill: $main-theme-color;
+    }
+}
+
+@include keyframes-prefixer(dynamic-theme-font-color) {
+    0% {
+        color: $main-theme-color;
+    }
+
+    10% {
+        color: #2ecc71;
+    }
+
+    20% {
+        color: #8e44ad;
+    }
+
+    30% {
+        color: #e67e22;
+    }
+
+    40% {
+        color: #e74c3c;
+    }
+
+    50% {
+        color: #3498db;
+    }
+
+    60% {
+        color: #f7b731;
+    }
+
+    70% {
+        color: #474787;
+    }
+
+    80% {
+        color: #ff793f;
+    }
+
+    90% {
+        color: #54a0ff;
+    }
+
+    100% {
+        color: $main-theme-color;
+    }
+}
