@@ -842,7 +842,7 @@ label.bold {
   }
 }
 .column.second-col .contact-options-container .contact-option a svg g {
-  fill: red;
+  fill: #0097e6;
   animation: dynamic-svg-color 100s linear infinite;
 }
 

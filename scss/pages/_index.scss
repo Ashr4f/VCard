@@ -197,7 +197,7 @@
                         }
 
                         g {
-                            fill: red;
+                            fill: $main-theme-color;
                             animation: dynamic-svg-color 100s linear infinite;
                         }
                     }
